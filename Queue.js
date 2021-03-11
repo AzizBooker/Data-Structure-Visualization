@@ -1,12 +1,13 @@
-console.log('Queue')
+console.groupCollapsed('Queue')
+
 class Queue{
     constructor(arr=[]){
         this.arr=arr
     }
-    push(arg){
+    enqueue(arg){
         this.arr.push(arg)
     }
-    pop(arg){
+    dequeue(arg){
        return this.arr.shift()
     }
     showQueue(){
@@ -17,10 +18,11 @@ class Queue{
 let arr=[0,1,2,3,4,5,6,7,8,9]
 
 let queue=new Queue(arr)
-console.log(queue.showQueue())
+console.log(`Intial:[${queue.showQueue()}]`)
 
-queue.push(10)
-console.log(queue.showQueue())
+queue.enqueue(10)
+console.log(`After enqueue:[${queue.showQueue()}]`)
 
-console.log(queue.pop())
-console.log(queue.showQueue())
+console.log(queue.dequeue())
+console.log(`After dequeue:[${queue.showQueue()}]`)
+console.groupEnd()

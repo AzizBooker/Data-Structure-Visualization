@@ -1,5 +1,6 @@
 
 //Create Linked List class points to first node known as 'head'
+console.groupCollapsed("Linked List")
 
 class LinkedList{
     constructor(head=null){
@@ -58,4 +59,6 @@ let list=new LinkedList(node1)
 
 console.log(list)
 
+
+console.groupEnd()
 
